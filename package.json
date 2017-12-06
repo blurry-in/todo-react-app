@@ -4,7 +4,8 @@
   "description": "A simple todo application, for the React tutorial on Blurry.in",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/blurry-in/todo-react-app/issues"
   },
-  "homepage": "https://github.com/blurry-in/todo-react-app#readme"
+  "homepage": "https://github.com/blurry-in/todo-react-app#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
 }
