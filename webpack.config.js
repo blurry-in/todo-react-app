@@ -1,6 +1,7 @@
 const Path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const SRC_DIR = Path.resolve(__dirname, 'src');
 const DIST_DIR = Path.resolve(__dirname, 'dist');
@@ -21,6 +22,31 @@ const config = {
         use: ['babel-loader'],
         exclude: [/node_modules/],
       },
+      {
+        test: /\.(css|scss)$/,
+        use: ExtractTextPlugin.extract({
+          use: [{
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          }, {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          }],
+          fallback: 'style-loader',
+        }),
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        use: 'file-loader?name=[name]-[hash].[ext]&outputPath=assets/fonts/&publicPath=../',
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        use: 'file-loader?name=[name]-[hash].[ext]&outputPath=assets/images/&publicPath=../',
+      },
     ],
   },
   plugins: [
@@ -29,6 +55,7 @@ const config = {
       filename: `${DIST_DIR}/index.html`,
     }),
     new Webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin('styles/style.css'),
   ],
   devServer: {
     hot: true,

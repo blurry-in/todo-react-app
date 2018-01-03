@@ -1,7 +1,11 @@
 import React from 'react';
+import './App.Component.scss';
 
 const AppComponent = () => (
-  <div>The App Component</div>
+  <div className="app-component">
+    The App Component
+    <button className="btn btn-primary">The Button</button>
+  </div>
 );
 
 export default AppComponent;
