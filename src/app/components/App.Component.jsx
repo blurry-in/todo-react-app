@@ -1,10 +1,14 @@
 import React from 'react';
+import HeaderComponent from './Header.Component';
+import FooterComponent from './Footer.Component';
+import BodyComponent from './Body.Component';
 import './App.Component.scss';
 
 const AppComponent = () => (
-  <div className="app-component">
-    The App Component
-    <button className="btn btn-primary">The Button</button>
+  <div className="container">
+    <HeaderComponent />
+    <BodyComponent />
+    <FooterComponent />
   </div>
 );
 
