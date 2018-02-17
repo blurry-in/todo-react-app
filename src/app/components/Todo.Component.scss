@@ -1,0 +1,18 @@
+@import '../constants/colors.scss';
+
+.todo {
+  width: 100%;
+  .todo-container {
+    background-color: $lightest-grey;
+    max-width: 900px;
+    padding: 10px 20px;
+    margin: auto auto;
+    .title {
+      font-size: 20px;
+    }
+    .author {
+      text-align: right;
+      color: $darker-grey;
+    }
+  }
+}

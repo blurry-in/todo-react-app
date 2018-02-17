@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.Component.scss';
+import TodoComponent from './Todo.Component';
+import './Body.Component.scss';
 
-const TAG = 'Body Component';
 const BodyComponent = () => (
-  <div className="container">
-    {TAG}
+  <div className="body">
+    <TodoComponent />
   </div>
 );
 
