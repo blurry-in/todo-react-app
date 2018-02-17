@@ -24,7 +24,7 @@ const config = {
       },
       {
         test: /\.(css|scss)$/,
-        use: ExtractTextPlugin.extract({
+        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
           use: [{
             loader: 'css-loader',
             options: {
@@ -37,7 +37,7 @@ const config = {
             },
           }],
           fallback: 'style-loader',
-        }),
+        })),
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
