@@ -4,7 +4,9 @@ import './Body.Component.scss';
 
 const BodyComponent = () => (
   <div className="body">
-    <TodoComponent />
+    <TodoComponent author="Author Name" title="The title" />
+    <TodoComponent author="Author Name" title="The title" />
+    <TodoComponent author="Author Name" title="The title" />
   </div>
 );
 
