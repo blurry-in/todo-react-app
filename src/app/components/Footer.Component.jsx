@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.Component.scss';
+import './Footer.Component.scss';
 
-const FOOTER_LABEL = 'TODO REACT APP';
+const FOOTER_LABEL = 'Copyright and Stuff';
 const FooterComponent = () => (
-  <div className="container">
-    {FOOTER_LABEL}
+  <div className="footer">
+    <div className="title text-center">{FOOTER_LABEL}</div>
   </div>
 );
 

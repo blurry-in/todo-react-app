@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.Component.scss';
+import './Header.Component.scss';
 
 const HEADER_LABEL = 'TODO REACT APP';
 const HeaderComponent = () => (
-  <div className="container">
-    {HEADER_LABEL}
+  <div className="header">
+    <div className="title text-center">{HEADER_LABEL}</div>
   </div>
 );
 

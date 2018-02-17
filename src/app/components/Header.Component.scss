@@ -1,0 +1,11 @@
+@import '../constants/colors.scss';
+
+.header {
+  background-color: $primary-color;
+  height: 150px;
+  padding-top: 40px;
+  .title {
+    color: $secondary-color;
+    font-size: 50px;
+  }
+}
