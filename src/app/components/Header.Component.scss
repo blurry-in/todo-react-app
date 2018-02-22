@@ -2,7 +2,7 @@
 
 .header {
   background-color: $primary-color;
-  height: 150px;
+  min-height: 150px;
   padding-top: 40px;
   .title {
     color: $secondary-color;
